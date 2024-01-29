@@ -1,0 +1,3 @@
+streamlit
+spacy
+https://model-skill-nlp.s3.ap-southeast-2.amazonaws.com/en_20230808-0.0.1-py3-none-any.whl
