@@ -6,14 +6,16 @@ import requests
 import pandas as pd
 import pkg_resources
 
-data = pkg_resources.resource_stream('en_20230808', 'meta.json')
 
-
-nlp = spacy.load("en_20230808")
-st.write(nlp("this is a model"))
+data = pkg_resources.resource_stream('en_20230808', '/en_20230808-0.0.1/data/skill_ner_mapping/lightcast_hier_mapper.json')
 
 with data as f:
     contents = json.load(f)
+
+print(contents)  # Access the parsed JSON data
+nlp = spacy.load("en_20230808")
+st.write(nlp("this is a model"))
+
 
 st.write(contents) 
 
