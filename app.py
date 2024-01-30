@@ -7,17 +7,16 @@ import pandas as pd
 import pkg_resources
 
 
-data = pkg_resources.resource_stream('en_20230808', '/en_20230808-0.0.1/data/skill_ner_mapping/lightcast_hier_mapper.json')
+data = pkg_resources.resource_stream('en_20230808', '/en_20230808-0.0.1/data/skill_ner_mapping/lightcast_embeddings.json')
 
 with data as f:
     contents = json.load(f)
 
-print(contents)  # Access the parsed JSON data
 nlp = spacy.load("en_20230808")
 st.write(nlp("this is a model"))
 
 
-st.write(contents) 
+st.write(type(contents)) 
 
 # def load_lightcast_embeddings():
 #     url = "https://skill-data-model.s3.ap-southeast-2.amazonaws.com/outputs/data/skill_ner_mapping/lightcast_embeddings.json"
