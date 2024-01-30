@@ -43,14 +43,14 @@ def load_lightcast_data_formatted():
 selected_category = st.selectbox("Select Data Category", ["Lightcast Embeddings", "Lightcast Hier Mapper", "Lightcast Data Formatted"])
 
 # Display selected data based on user's choice
-if selected_category == "Lightcast Embeddings" and data_lightcast_embeddings:
+if selected_category == "Lightcast Embeddings":
     data_lightcast_embeddings = load_lightcast_embeddings()
     st.write("Data Lightcast Embeddings:", data_lightcast_embeddings)
 
-elif selected_category == "Lightcast Hier Mapper" and data_lightcast_hier_mapper:
+elif selected_category == "Lightcast Hier Mapper":
     data_lightcast_hier_mapper = load_lightcast_hier_mapper()
     st.write("Data Lightcast Hier Mapper:", data_lightcast_hier_mapper)
 
-elif selected_category == "Lightcast Data Formatted" and df_lightcast_data_formatted is not None:
+elif selected_category == "Lightcast Data Formatted":
     df_lightcast_data_formatted = load_lightcast_data_formatted()
     st.write("DataFrame Lightcast Data Formatted:", df_lightcast_data_formatted)
